@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Thesaurus {
     private String keyword;
     private String type;
-    private ArrayList<String> list_thesaurus = new ArrayList<>(); // 유의어
+    private ArrayList<String> list_thesaurus = new ArrayList<>();
 
     public void setKeyWord(String keyWord) {
         this.keyword = keyWord;
@@ -18,6 +18,12 @@ public class Thesaurus {
     }
 
     public String toString() {
-        return keyword + " [" + type + "] : " + list_thesaurus;
+        String str = keyword + " [" + type + "] : {";
+        for(int i=0; i<list_thesaurus.size(); i++) {
+            str = str + list_thesaurus.get(i) + ", ";
+        }
+        str = str + "}";
+
+        return str;
     }
 }

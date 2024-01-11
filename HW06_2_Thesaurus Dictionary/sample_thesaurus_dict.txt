@@ -3,7 +3,7 @@ mean ADJ nasty poor miserly
 mean VERB denote intend
 offer NOUN proposal
 offer VERB propose present
-compromise NOUN bargining
+compromise NOUN bargaining
 compromise VERB settle concilliate
 delegate NOUN representative agent substitute
-delegate VERBauthorize appoint designate
+delegate VERB authorize appoint designate
