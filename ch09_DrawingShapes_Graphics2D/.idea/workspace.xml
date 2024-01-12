@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a04f552-d5f9-4d96-b2d1-508b2acb5614" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/HW09_1_DrawingShapes_Graphics2D.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/src/App_DrawingShapes_Graphics2D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/src/JPanel_Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/src/JPanel_Polygon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/src/JPanel_Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_1_DrawingShapes_Graphics2D/src/JPanel_Star.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_2_Bouncing_Ball_Animation/src/Animation_BouncingBall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_2_Bouncing_Ball_Animation/src/JPanel_BouncingBall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_2_Bouncing_Ball_Animation/src/JPanel_RadioButton_Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_2_Bouncing_Ball_Animation/src/JSlider_SpeedControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HW09_2_Bouncing_Ball_Animation/src/RB_Color_ItemListener.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2aptRiI3sX6ktRbFYRBZTI2KN0C" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="8a04f552-d5f9-4d96-b2d1-508b2acb5614" name="변경" comment="" />
+      <created>1705027344660</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705027344660</updated>
+      <workItem from="1705027345691" duration="40000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
