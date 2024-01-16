@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body onload="count()">
+    Hello World! I have been seen <span id="count">1</span> times.
+    <script>
+        var count = localStorage.getItem('count');
+
+        window.onload = function () {
+            count++;
+            localStorage.setItem('count', count);
+            document.getElementById('count').textContent = count;
+        }
+
+    </script>
+</body>
+
+</html>

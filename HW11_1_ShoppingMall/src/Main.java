@@ -47,19 +47,81 @@ public class Main {
             if (tableExistsSQL(conn_db_shoppingmall, tbl_member_name)) {
                 System.out.printf("Table (%s) is already existing in Database (%s)\n",
                         tbl_member_name, db_shoppingmall_name);
+            } else {
+                System.out.printf("Table (%s) is not existing in Database (%s)\n",
+                        tbl_member_name, db_shoppingmall_name);
+                stmt = conn_db_shoppingmall.createStatement();
+                sql = "CREATE TABLE " + tbl_member_name +
+                        "(name VARCHAR(45) NOT NULL, " +
+                        "contact_point VARCHAR(45) NOT NULL, " +
+                        "address VARCHAR(45) NOT NULL, " +
+                        "PRIMARY KEY (name)" +
+                        ");";
+                result = stmt.executeUpdate(sql);
+                System.out.printf("Table (%s) is created in Database (%s)\n",
+                        tbl_member_name, db_shoppingmall_name);
             }
+
             if (tableExistsSQL(conn_db_shoppingmall, tbl_product_name)) {
                 System.out.printf("Table (%s) is already existing in Database (%s)\n",
                         tbl_product_name, db_shoppingmall_name);
+            } else {
+                System.out.printf("Table (%s) is not existing in Database (%s)\n",
+                        tbl_product_name, db_shoppingmall_name);
+                stmt = conn_db_shoppingmall.createStatement();
+                sql = "CREATE TABLE " + tbl_product_name +
+                        "(product_name VARCHAR(45) NOT NULL, " +
+                        "price INT NOT NULL , " +
+                        "manufacturer VARCHAR(45) NOT NULL, "  +
+                        "PRIMARY KEY (product_name)" +
+                        ");";
+                result = stmt.executeUpdate(sql);
+                System.out.printf("Table (%s) is created in Database (%s)\n",
+                        tbl_product_name, db_shoppingmall_name);
             }
+
             if (tableExistsSQL(conn_db_shoppingmall, tbl_order_name)) {
                 System.out.printf("Table (%s) is already existing in Database (%s)\n",
                         tbl_order_name, db_shoppingmall_name);
+            } else {
+                System.out.printf("Table (%s) is not existing in Database (%s)\n",
+                        tbl_order_name, db_shoppingmall_name);
+                stmt = conn_db_shoppingmall.createStatement();
+                sql = "CREATE TABLE " + tbl_order_name +
+                        "(order_number INT NOT NULL , " +
+                        "purchaser VARCHAR(45) NOT NULL , " +
+                        "item VARCHAR(45) NOT NULL, " + "total_price INT NOT NULL " +
+                        "PRIMARY KEY (order_number)," +
+                        "INDEX item_idx (item ASC) VISIBLE," +
+                        "INDEX purchaser_idx (purchaser ASC) VISIBLE," +
+                        "CONSTRAINT item FOREIGN KEY (item) REFERENCES db_shoppingmall.tbl_product (product_name) ON DELETE NO ACTION ON UPDATE NO ACTION, " +
+                        "CONSTRAINT purchaser FOREIGN KEY (purchaser) REFERENCES db_shoppingmall.tbl_member (name) ON DELETE NO ACTION ON UPDATE NO ACTION" +
+                        ");";
+                result = stmt.executeUpdate(sql);
+                System.out.printf("Table (%s) is created in Database (%s)\n",
+                        tbl_order_name, db_shoppingmall_name);
             }
+
             if (tableExistsSQL(conn_db_shoppingmall, tbl_cart_name)) {
                 System.out.printf("Table (%s) is already existing in Database (%s)\n",
                         tbl_cart_name, db_shoppingmall_name);
+            } else {
+                System.out.printf("Table (%s) is not existing in Database (%s)\n",
+                        tbl_cart_name, db_shoppingmall_name);
+                stmt = conn_db_shoppingmall.createStatement();
+                sql = "CREATE TABLE " + tbl_cart_name+
+                        "(customer VARCHAR(45) NOT NULL, " +
+                        "product VARCHAR(45) NULL, " +
+                        "PRIMARY KEY (customer), " +
+                        "INDEX product_idx (product ASC) VISIBLE, " +
+                        "CONSTRAINT customer FOREIGN KEY (customer) REFERENCES db_shoppingmall.tbl_member (name) ON DELETE NO ACTION ON UPDATE NO ACTION, " +
+                        "CONSTRAINT product FOREIGN KEY (product) REFERENCES db_shoppingmall.tbl_product (product_name) ON DELETE NO ACTION ON UPDATE NO ACTION " +
+                        ");";
+                result = stmt.executeUpdate(sql);
+                System.out.printf("Table (%s) is created in Database (%s)\n",
+                        tbl_cart_name, db_shoppingmall_name);
             }
+
             fget_and_insert_STData_tbl_member(tbl_member_file, conn_db_shoppingmall, tbl_member_name);
             fget_and_insert_STData_tbl_product(tbl_product_file, conn_db_shoppingmall, tbl_product_name);
             fget_and_insert_STData_tbl_order(tbl_order_file, conn_db_shoppingmall, tbl_order_name);

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Trigonometric Table</h2>
+    <table id="trigTable">
+        <thead>
+            <tr>
+                <th>Degrees</th>
+                <th>Sine</th>
+                <th>Cosine</th>
+                <th>Tangent</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        function generateTrigTable() {
+            var tableBody = document.querySelector('#trigTable tbody');
+            tableBody.innerHTML = "";
+
+            var degreesList = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360];
+
+            for (let degree of degreesList) {
+                var row = document.createElement('tr');
+                // Degrees column
+                var degreesCell = document.createElement('td');
+                degreesCell.textContent = degree;
+                row.appendChild(degreesCell);
+                // Sine column
+                var sineCell = document.createElement('td');
+                sineCell.textContent = Math.sin(degree * (Math.PI / 180)).toFixed(4);
+                row.appendChild(sineCell);
+                // Cosine column
+                var cosineCell = document.createElement('td');
+                cosineCell.textContent = Math.cos(degree * (Math.PI / 180)).toFixed(4);
+                row.appendChild(cosineCell);
+                // Tangent column
+                var tangentCell = document.createElement('td');
+                tangentCell.textContent = Math.tan(degree * (Math.PI / 180)).toFixed(4);
+                row.appendChild(tangentCell);
+
+                tableBody.appendChild(row);
+            }
+        }
+
+        generateTrigTable();
+    </script>
+</body>
+
+</html>

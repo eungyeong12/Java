@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Application of Date() </title>
+    <script>
+        function getYrMnDy() {
+            const date_str = document.getElementById('input_date_area').value;
+            document.getElementById("result").innerText = date_str;
+            const d = new Date(date_str);
+            document.getElementById("result").innerHTML = d;
+            const yr = d.getFullYear();
+            const mn = d.getMonth() + 1;
+            const dy = d.getDate();
+            const week = ["SUN", "Mon", "TUE", "WED", "TUR", "FRI", "SAT"];
+            const weekDay = week[d.getDay()];
+            document.getElementById("yyyy_mm_dd").innerHTML = "year(" + yr + "), month(" + mn + "), day(" + dy + "), week_day(" + weekDay + ")";
+        }
+    </script>
+</head>
+
+<body>
+    Date (yyyy-mm-dd) : <input id='input_date_area' onchange='getYrMnDy()' />
+    <div id='result'></div>
+    <p id='yyyy_mm_dd'></p>
+</body>
+
+</html>
