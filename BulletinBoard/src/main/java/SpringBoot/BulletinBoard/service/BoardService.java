@@ -39,6 +39,7 @@ public class BoardService {
         return boardDTOList;
     }
 
+    @Transactional
     public BoardDTO getMyBoard(long id) {
         Board mybd = boardRepository.findById(id).orElse(null);
 

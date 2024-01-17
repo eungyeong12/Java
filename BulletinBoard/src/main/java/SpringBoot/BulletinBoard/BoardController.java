@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -76,10 +77,10 @@ public class BoardController {
             Long fileId = fileService.saveFile(fileDTO);
             boardDTO.setFileId(fileId);
             boardDTO.setFilename(origFilename);
-            boardService.savePost(boardDTO);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        boardService.savePost(boardDTO);
         return "redirect:/";
     }
 
