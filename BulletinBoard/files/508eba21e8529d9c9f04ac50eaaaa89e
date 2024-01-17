@@ -1,0 +1,16 @@
+나중에 삭제할 때 탄력적 IP도 삭제하기
+
+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
+
+cat /dev/null > nohup.out 
+
+jdbc:mysql://springboot-board-webservice.cman0ekmip9b.ap-northeast-2.rds.amazonaws.com:3306/springboot_board_webservice?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+
+
+runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+sudo mysql -u joeungyeong -p -h springboot-board-webservice.cman0ekmip9b.ap-northeast-2.rds.amazonaws.com
+
+DELETE FROM your_table WHERE id BETWEEN 1 AND 1000;
+
+다시 푸시할 때는 build 파일 지우고 하기 
